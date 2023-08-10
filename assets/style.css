@@ -1,0 +1,414 @@
+/* Main color of the page accents, including the header and sidebar elements */
+:root {
+    --maincolor: #0d3b66;
+}
+
+/* Main header backdrop */
+header {
+    color: white;
+    font-family: arial;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #0d3b66;
+}
+
+/* Main header text */
+h1 {
+    position: relative;
+    display: inline;
+    left: 50px;
+    top: 40px;
+    align-items: center;
+    padding: 5px;
+}
+
+/* Navigation bar */
+.nav {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    top: -60px;
+}
+
+/* Items within navigation bar styling and positioning */
+li {
+    display: flex;
+    position: relative;
+    padding: 5px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    left: -20px;
+}
+
+li:hover {
+    border-style: dotted;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #996888;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Setting the parameters of the grid */
+.container {
+    display: grid;
+    grid-template-columns: .7fr 1fr 1fr;
+    grid-template-rows: 200px 600px 300px 300px 200px;
+    height: 100vh;
+    grid-template-areas:
+        "about abcon abcon"
+        "work proj1 proj1"
+        "work proj2 proj3"
+        "work proj4 proj5"
+        "contact concon concon"
+}
+
+/* Profile image */
+h1 img {
+    max-width: 90px;
+    max-height: 90px;
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border: solid;
+    border-radius: 10px;
+}
+
+/* About subheading */
+#about {
+    grid-area: about;
+    border-right: solid;
+    border-width: 10px;
+    border-color: var(--maincolor);
+    color: var(--maincolor);
+    font-family: arial;
+    font-size: 40px;
+    text-align: right;
+    padding: 5px;
+    padding-right: 20px;
+}
+
+/* Work subheading */
+#projects {
+    grid-area: work;
+    border-right: solid;
+    border-width: 10px;
+    border-color: var(--maincolor);
+    color: var(--maincolor);
+    font-family: arial;
+    font-size: 40px;
+    text-align: right;
+    padding: 5px;
+    padding-right: 20px;
+}
+
+/* Contact subheading */
+#contact {
+    grid-area: contact;
+    border-right: solid;
+    border-width: 10px;
+    border-color: var(--maincolor);
+    color: var(--maincolor);
+    font-family: arial;
+    font-size: 40px;
+    text-align: right;
+    padding: 5px;
+    padding-right: 20px;
+}
+
+/* Content within about section */
+#abcon {
+    grid-area: abcon;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-family: helvetica;
+    color: darkslategray;
+    max-height: 100%;
+    overflow: scroll;
+    margin-left: 10px;
+}
+
+/* Defining grid area */
+#proj1 {
+    grid-area: proj1;
+    align-items: center;
+}
+
+.image1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling for largest project images */
+.largephoto a p {
+    position: absolute;
+    color: white;
+    font-style: arial;
+    font-size: larger;
+    background-color: gray;
+    text-transform: uppercase;
+    z-index: 2;
+    border: solid var(--maincolor) 3px;
+    bottom: -170px;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Styling for rest of project images */
+.smallphoto1 a p {
+    position: absolute;
+    color: white;
+    font-style: arial;
+    font-size: larger;
+    background-color: gray;
+    text-transform: uppercase;
+    z-index: 2;
+    border: solid var(--maincolor) 3px;
+    padding: 10px;
+    margin: 10px;
+    bottom: -600px;
+}
+
+.smallphotoright1 a p {
+    position: absolute;
+    color: white;
+    font-style: arial;
+    font-size: larger;
+    background-color: gray;
+    text-transform: uppercase;
+    z-index: 2;
+    border: solid var(--maincolor) 3px;
+    padding: 10px;
+    margin: 10px;
+    bottom: -600px;
+}
+
+.smallphoto2 a p {
+    position: absolute;
+    color: white;
+    font-style: arial;
+    font-size: larger;
+    background-color: gray;
+    text-transform: uppercase;
+    z-index: 2;
+    border: solid var(--maincolor) 3px;
+    padding: 10px;
+    margin: 10px;
+    bottom: -900px;
+}
+
+.smallphotoright2 a p {
+    position: absolute;
+    color: white;
+    font-style: arial;
+    font-size: larger;
+    background-color: gray;
+    text-transform: uppercase;
+    z-index: 2;
+    border: solid var(--maincolor) 3px;
+    padding: 10px;
+    margin: 10px;
+    bottom: -900px;
+}
+
+#img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Defining grid area */
+#proj2 {
+    grid-area: proj2;
+}
+
+/* Defining grid area */
+#proj3 {
+    grid-area: proj3;
+}
+
+/* Defining grid area */
+#proj4 {
+    grid-area: proj4;
+}
+
+/* Defining grid area */
+#proj5 {
+    grid-area: proj5;
+}
+
+/* Hover effect for images */
+.image1:hover {
+    border-radius: 25px;
+    border: solid gray;
+    opacity: 0.5;
+}
+
+/* Contact content styling */
+#concon {
+    grid-area: concon;
+    color: darkslategray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: arial;
+    font-size: 20px;
+}
+
+/* Margin for project photos */
+.largephoto {
+    margin: 5px;
+}
+
+.smallphoto1 {
+    margin: 5px;
+}
+
+.smallphoto2 {
+    margin: 5px;
+}
+
+.smallphotoright1 {
+    margin: 5px;
+}
+
+.smallphotoright2 {
+    margin: 5px;
+}
+
+/* Styling for mobile devices */
+@media screen and (max-width: 900px) {
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        margin: auto;
+        margin-top: 120px;
+    }
+
+    header h1 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+        left: 0px;
+        top: 0px;
+        margin-top: 20px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px;
+        height: 100vh;
+        grid-template-areas:
+            "about"
+            "abcon"
+            "work"
+            "proj1"
+            "proj2"
+            "proj3"
+            "proj4"
+            "proj5"
+            "contact"
+            "concon"
+    }
+
+    .largephoto a p {
+        position: absolute;
+        color: white;
+        font-style: arial;
+        font-size: larger;
+        background-color: gray;
+        text-transform: uppercase;
+        z-index: 2;
+        border: solid var(--maincolor) 3px;
+        bottom: -600px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .smallphoto1 a p {
+        position: absolute;
+        color: white;
+        font-style: arial;
+        font-size: larger;
+        background-color: gray;
+        text-transform: uppercase;
+        z-index: 2;
+        border: solid var(--maincolor) 3px;
+        padding: 10px;
+        margin: 10px;
+        bottom: -800px;
+    }
+
+    .smallphotoright1 a p {
+        position: absolute;
+        color: white;
+        font-style: arial;
+        font-size: larger;
+        background-color: gray;
+        text-transform: uppercase;
+        z-index: 2;
+        border: solid var(--maincolor) 3px;
+        padding: 10px;
+        margin: 10px;
+        bottom: -1000px;
+    }
+
+    .smallphoto2 a p {
+        position: absolute;
+        color: white;
+        font-style: arial;
+        font-size: larger;
+        background-color: gray;
+        text-transform: uppercase;
+        z-index: 2;
+        border: solid var(--maincolor) 3px;
+        padding: 10px;
+        margin: 10px;
+        bottom: -1200px;
+    }
+
+    .smallphotoright2 a p {
+        position: absolute;
+        color: white;
+        font-style: arial;
+        font-size: larger;
+        background-color: gray;
+        text-transform: uppercase;
+        z-index: 2;
+        border: solid var(--maincolor) 3px;
+        padding: 10px;
+        margin: 10px;
+        bottom: -1400px;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+}
